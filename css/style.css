@@ -1,0 +1,23 @@
+.my-aside{
+    width: 40%;
+    height: 840px;
+}
+
+.my-main-chat{
+    width: 60%;
+    height: 840px;
+}
+
+.profile-pic{
+    width: 80px;
+}
+
+.active-chat{
+    height: calc(100vh - 249px);
+}
+
+#boolzapp{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
