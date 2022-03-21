@@ -70,6 +70,30 @@ body{
     height: 70px;
 }
 
+.first-message-sent, .message-sent{
+    background-color: 
+    #d5f9ba;
+    width: 100px;
+    height: 40px;
+    margin-right: 100px;
+}
+
+.first-message-sent{
+    margin-top: 100px;
+}
+
+.message-sent, .message-recived{
+    margin-top: 20px;
+}
+
+.message-recived{
+    background-color: 
+    #ffffff;
+    margin-left: 100px;
+    width: 100px;
+    height: 40px;
+}
+
 #boolzapp{
     height: 100vh;
     width: 100vw;
