@@ -1,6 +1,30 @@
+*{
+    font-family: 'montserrat';
+    font-size: 15px;
+}
+
+body{
+    background-color: #e0e0e0;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.my-bell i {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    color: #8edafc;
+}
+
 .my-aside{
     width: 40%;
     height: 840px;
+}
+
+.my-bell{
+    height: 70px;
 }
 
 .my-main-chat{
@@ -9,15 +33,41 @@
 }
 
 .profile-pic{
-    width: 80px;
+    width: 60px;
 }
 
 .active-chat{
     height: calc(100vh - 249px);
 }
 
+.bg-light-grey{
+    background-color:#eaeaea;
+}
+
+.bg-light-blue{
+    background-color: 
+    #8edafc;
+}
+
+.current-contact, .my-account{
+    height: 70px;
+    border: 1px solid lightgrey;
+}
+
+.contact-card{
+    padding: .5rem;
+    height: 75px;
+    border: 1px solid #eaeaea;
+}
+
 #boolzapp{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+}
+
+#my-contacts{
+    height: 650px;
+    overflow-y: scroll;
+    padding-right: 5px;
 }
