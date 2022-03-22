@@ -166,7 +166,10 @@ const app = new Vue({
         ]
     },
     methods: {
-
+        activeContact(index){
+            const elementName = document.querySelector(".contact-card");
+            elementName.classList.toggle("active");
+        }   
     }
 });
 

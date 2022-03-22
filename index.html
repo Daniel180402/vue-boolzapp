@@ -27,7 +27,7 @@
                         <div class="col-12">
                             <div class="my-account bg-light-grey d-flex align-items-center ps-2 justify-content-between">
                                 <div class="d-flex align-items-center" v-for="(contact, index) in contacts.slice(0, 1)">
-                                    <img class="profile-pic rounded-circle" src="img/avatar_1.jpg" alt="">
+                                    <img class="profile-pic rounded-circle d-flex align-items-center" :src='"img/avatar" + contact.avatar + ".jpg"'>
                                     <p class="m-0 ps-2">{{ contact.name }}</p>
                                 </div>
                                 <div class="me-3">
@@ -61,10 +61,10 @@
                     <section id="my-contacts">
                         <div class="row m-0 g-0">
                             <div class="col-12">
-                                <div class="contact-card" v-for="(contact, index) in contacts.slice(1)">
+                                <div class="contact-card" @click="activeContact()" v-for="(contact, index) in contacts.slice(1)">
                                     <div class="row" >
                                         <div class="col-2">
-                                            <img class="profile-pic rounded-circle d-flex align-items-center" src="img/avatar{{ contact.avatar }}.jpg" alt="">
+                                            <img class="profile-pic rounded-circle d-flex align-items-center" :src='"img/avatar" + contact.avatar + ".jpg"'>
                                         </div>
                                         <div class="col-8">
                                             <p class="m-0">{{ contact.name }}</p>
@@ -85,7 +85,7 @@
                             <div class="col-12">
                                 <div class="current-contact bg-light-grey d-flex align-items-center justify-content-between ps-2">
                                     <div class="d-flex align-items-center" v-for="(contact, index) in contacts.slice(1, 2)">
-                                        <img class="profile-pic rounded-circle" src="img/avatar{{contact.avatar}}.jpg" alt="">
+                                        <img class="profile-pic rounded-circle d-flex align-items-center" :src='"img/avatar" + contact.avatar + ".jpg"'>
                                         <div class="d-flex flex-column ps-3">
                                             <p class="m-0">{{ contact.name }}</p>
                                             <p class="m-0">Ultimo accesso oggi alle 12:00</p>
@@ -103,24 +103,12 @@
                             <div class="col-12">
                                 <div class="active-chat">
                                     <div class="background-image">
-                                        <div class="row">
+                                        <div class="row" v-for="(mess, index) in contacts.slice(0,1)">
                                             <div class="col-12">
                                                 <div class="first-message-sent float-end d-flex align-items-center ps-3 rounded-3">
-                                                    <span>Message1</span>
+                                                    <span>{{ mess.message }}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-12">
-                                                <div class="message-sent float-end d-flex align-items-center ps-3 rounded-3">
-                                                    <span>Message2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="message-recived float-start d-flex align-items-center ps-3 rounded-3">
-                                                    <span>Message3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                         </div>
                                     </div>
                                 </div>
