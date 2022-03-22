@@ -26,9 +26,9 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="my-account bg-light-grey d-flex align-items-center ps-2 justify-content-between">
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center" v-for="(contact, index) in contacts.slice(0, 1)">
                                     <img class="profile-pic rounded-circle" src="img/avatar_1.jpg" alt="">
-                                    <p class="m-0 ps-2">nome</p>
+                                    <p class="m-0 ps-2">{{ contact.name }}</p>
                                 </div>
                                 <div class="me-3">
                                     <i class="bi bi-circle px-2 fs-5"></i>
@@ -61,65 +61,17 @@
                     <section id="my-contacts">
                         <div class="row m-0 g-0">
                             <div class="col-12">
-                                <div class="contact-card">
-                                    <div class="row">
+                                <div class="contact-card" v-for="(contact, index) in contacts.slice(1)">
+                                    <div class="row" >
                                         <div class="col-2">
-                                            <img class="profile-pic rounded-circle d-flex align-items-center" src="img/avatar_2.jpg" alt="">
+                                            <img class="profile-pic rounded-circle d-flex align-items-center" src="img/avatar{{ contact.avatar }}.jpg" alt="">
                                         </div>
                                         <div class="col-8">
-                                            <p class="m-0">name</p>
-                                            <p>message</p>
+                                            <p class="m-0">{{ contact.name }}</p>
+                                            <p>Ultimo messaggio inviato</p>
                                         </div>
                                         <div class="col-2">
-                                            <p>time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="contact-card">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <img class="profile-pic rounded-circle" src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="m-0">name</p>
-                                            <p>message</p>
-                                        </div>
-                                        <div class="col-2">
-                                            <p>time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="contact-card">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <img class="profile-pic rounded-circle" src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="m-0">name</p>
-                                            <p>message</p>
-                                        </div>
-                                        <div class="col-2">
-                                            <p>time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="contact-card">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <img class="profile-pic rounded-circle" src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="m-0">name</p>
-                                            <p>message</p>
-                                        </div>
-                                        <div class="col-2">
-                                            <p>time</p>
+                                            <p>12:00</p>
                                         </div>
                                     </div>
                                 </div>
@@ -132,11 +84,11 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="current-contact bg-light-grey d-flex align-items-center justify-content-between ps-2">
-                                    <div class="d-flex align-items-center">
-                                        <img class="profile-pic rounded-circle" src="img/avatar_1.jpg" alt="">
+                                    <div class="d-flex align-items-center" v-for="(contact, index) in contacts.slice(1, 2)">
+                                        <img class="profile-pic rounded-circle" src="img/avatar{{contact.avatar}}.jpg" alt="">
                                         <div class="d-flex flex-column ps-3">
-                                            <p class="m-0">Name</p>
-                                            <p class="m-0">time</p>
+                                            <p class="m-0">{{ contact.name }}</p>
+                                            <p class="m-0">Ultimo accesso oggi alle 12:00</p>
                                         </div>
                                     </div>
                                     <div class="me-3">
