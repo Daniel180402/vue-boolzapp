@@ -61,7 +61,7 @@
                     <section id="my-contacts">
                         <div class="row m-0 g-0">
                             <div class="col-12">
-                                <div class="contact-card" @click="activeContact()" v-for="(contact, index) in contacts.slice(1)">
+                                <div class="contact-card" v-for="(contact, index) in contacts.slice(1)" :class="(activeElement === index) ? 'active' : '' " >
                                     <div class="row" >
                                         <div class="col-2">
                                             <img class="profile-pic rounded-circle d-flex align-items-center" :src='"img/avatar" + contact.avatar + ".jpg"'>
@@ -83,8 +83,8 @@
                     <div class="my-chat">
                         <div class="row">
                             <div class="col-12">
-                                <div class="current-contact bg-light-grey d-flex align-items-center justify-content-between ps-2">
-                                    <div class="d-flex align-items-center" v-for="(contact, index) in contacts.slice(1, 2)">
+                                <div class="current-contact bg-light-grey d-flex align-items-center justify-content-between ps-2" v-for="(contact, index) in contacts.slice(1, 2)">
+                                    <div class="d-flex align-items-center">
                                         <img class="profile-pic rounded-circle d-flex align-items-center" :src='"img/avatar" + contact.avatar + ".jpg"'>
                                         <div class="d-flex flex-column ps-3">
                                             <p class="m-0">{{ contact.name }}</p>
@@ -121,7 +121,7 @@
                                         <p class="m-0"><i class="bi bi-emoji-smile fs-4"></i></p>
                                     </div>
                                     <div class="w-100">
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Scrivi un messaggio">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Scrivi un messaggio">
                                     </div>
                                     <div class="px-5">
                                         <p class="m-0"><i class="bi bi-mic fs-4"></i></p>

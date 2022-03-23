@@ -1,6 +1,7 @@
 const app = new Vue({
     el: "#app",
     data: {
+        activeElement: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -167,8 +168,8 @@ const app = new Vue({
     },
     methods: {
         activeContact(index){
-            const elementName = document.querySelector(".contact-card");
-            elementName.classList.toggle("active");
+            this.activeElement = index;
+            console.log("cia");
         }   
     }
 });
