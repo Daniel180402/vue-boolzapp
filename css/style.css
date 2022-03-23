@@ -70,28 +70,14 @@ body{
     height: 70px;
 }
 
-.first-message-sent, .message-sent{
-    background-color: 
-    #d5f9ba;
-    width: 100px;
-    height: 40px;
-    margin-right: 100px;
+.message.sent{
+    background-color: #d5f9ba;
 }
 
-.first-message-sent{
-    margin-top: 100px;
-}
-
-.message-sent, .message-recived{
-    margin-top: 20px;
-}
-
-.message-recived{
+.message.recived{
     background-color: 
     #ffffff;
-    margin-left: 100px;
-    width: 100px;
-    height: 40px;
+    align-self: start;
 }
 
 .active{
