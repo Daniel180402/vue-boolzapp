@@ -2,6 +2,8 @@ const app = new Vue({
     el: "#app",
     data: {
         activeElement: 0,
+        newMessageContent: "",
+        searchContact: "",
         contacts: [
             {
                 name: 'Michele',
@@ -163,6 +165,23 @@ const app = new Vue({
                         status: 'received'
                     }
                 ],
+            },
+            {
+                name: 'Federico',
+                avatar: '_7',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                        status: 'received'
+                    }
+                ],
             }
         ]
     },
@@ -170,8 +189,31 @@ const app = new Vue({
         activeContact(index){
             this.activeElement = index;
             console.log("cia");
-            
-        }   
+
+        },
+        
+        newMessage(contacts, index, messageContent){
+            const today = new Date();
+            const newMessage = {
+                date: today.getDay() + "/" + today.getMonth() + "/" + "/" + today.getFullYear(),
+                message: messageContent,
+                status: "sent"
+            };
+            console.warn();
+            contacts[index].messages.push(newMessage);
+        },
+
+        filterSearchContact(stringToSearch){
+            const self = this;
+            self.contacts.forEach((contact) => {
+                if(contact.name.toLowerCase().includes(stringToSearch.toLowerCase().trim())){
+                    contact.visible = true;
+                }
+                else{
+                    contact.visible = false;
+                }
+            });
+        }
     }
 });
 
