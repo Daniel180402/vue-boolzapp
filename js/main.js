@@ -170,6 +170,7 @@ const app = new Vue({
         activeContact(index){
             this.activeElement = index;
             console.log("cia");
+            
         }   
     }
 });
